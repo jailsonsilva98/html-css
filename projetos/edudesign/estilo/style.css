@@ -22,6 +22,7 @@
 }
 
 header {
+    background-image: url('imagens/logo 02.png');
     background-color: var(--cor01);
     text-align: center;
     min-height: 150px;
