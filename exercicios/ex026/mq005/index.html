@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Meu Site</h1>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    <main>
+        <article>
+            <h2>Testando Media Queries</h2>
+            <p>As media queries são uma funcionalidade do CSS que permite ajustar o estilo de uma página com base nas características do dispositivo do usuário, como largura da tela, altura, resolução e orientação. Elas são essenciais para o design responsivo, garantindo que um site se adapte a diferentes tamanhos de tela, desde desktops até smartphones.</p>
+
+            <p>A sintaxe básica de uma media query utiliza a regra @media, seguida por uma condição e um bloco de regras CSS. Um exemplo comum é:</p>
+
+            <p>Neste exemplo, o fundo da página será azul claro apenas quando a largura da tela for menor ou igual a 768 pixels. Isso é útil para criar layouts que mudam dinamicamente conforme o tamanho do dispositivo.</p>
+            
+            <p>Além de max-width, outras propriedades podem ser usadas, como min-width, orientation (para diferenciar dispositivos em modo retrato ou paisagem) e prefers-color-scheme (para adaptar o design ao tema claro ou escuro do usuário). O uso inteligente de media queries melhora a experiência do usuário e torna um site mais acessível e funcional em diversos dispositivos.</p>
+        </article>
+    </main>
+    <script>
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = "block"
+            }
+        }
+    </script>
+</body>
+</html>
