@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduardo Graphic Design</title>
+    <title>EDUARDO FREITAS - DG</title>
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="estilo/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
-        <img src="imagens/logo 02.png" alt="logo edu Designer" class="imagem-logo">
-        <nav class="menu-container">
-            <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-            <ul class="menu">
-                <li><a href="#" target="_blank">HOME</a></li>
-                <li><a href="#">PORTFÓLIO</a></li>
+        <img src="imagens/logo 02.png" id="logo" alt="logomarca">
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+        <menu id="menu">
+            <ul id="menu-itens">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">SOBRE MIM</a></li>
                 <li><a href="#">CONTATO</a></li>
             </ul>
-        </nav>
+        </menu>
     </header>
+
     <main>
         <div class="main-text">
             <div class="title-style">
@@ -38,6 +41,22 @@
 
     </footer>
     
-    <script src="script.js"></script>
+    <script>
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                menu.style.display = 'block'
+            } else {
+                menu.style.display = 'none'
+            }
+        }
+
+        function clickMenu() {
+            if (menu.style.display == 'block') {
+                menu.style.display = 'none'
+            } else {
+                menu.style.display = "block"
+            }
+        }
+    </script>
 </body>
 </html>

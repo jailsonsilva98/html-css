@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Deadknight';
+    src: url('../fontes/Deadknight.otf') format('opentype');
+    font-weight: normal;
+}
+:root {
+    --cor01: #D9043D;
+    --cor02: #D90452;
+    --cor03: #BF0404;
+    --cor04: #8C0303;
+    --cor05: #0d0d0d;
+
+    --fonte-padrao: 'Arial', Helvetica, sans-serif;
+    --fonte-titulo: 'Deadknight', serif;
+}
+
+* {
+    font-family: var(--fonte-padrao);
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* MENU DO SITE */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+span#burguer {
+    display: block;
+    color: var(--cor02);
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#logo {
+    width: 200px;
+    padding: 20px;
+}
+
+#menu {
+    display: none;
+    background-color: var(--cor02);
+    width: 150px;
+    text-align: right;
+    position: absolute;
+    border-radius: 10px;
+    top: 60px;
+    right: 10px;
+}
+
+#menu #menu-itens > li{
+    display: block;
+    list-style-type: none;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+#menu #menu-itens > li > a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#menu #menu-itens > li > a:hover {
+    background-color: var(--cor05);
+    color: var(--cor02);
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+/* CONTEUDO DO SITE */
+
+main {
+    text-align: center;
+}

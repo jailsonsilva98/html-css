@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+    span#burguer {
+        display: none;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #menu {
+        display: block;
+        background-color: white;
+        width: 50vw;
+        top: 40px;
+    }
+
+    #menu #menu-itens > li{
+        display: inline;
+    }
+
+    #menu #menu-itens > li > a {
+        color: var(--cor02);
+    }
+
+    #menu #menu-itens > li > a:hover {
+        background-color: white;
+        color: var(--cor04);
+        padding: 0;
+    }
+}
