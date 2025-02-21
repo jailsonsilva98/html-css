@@ -12,7 +12,7 @@
     --cor04: #8C0303;
     --cor05: #0d0d0d;
 
-    --fonte-padrao: 'Arial', Helvetica, sans-serif;
+    --fonte-padrao: 'Montserrat', sans-serif;
     --fonte-titulo: 'Deadknight', serif;
 }
 
@@ -20,6 +20,7 @@
     font-family: var(--fonte-padrao);
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 body, html {
@@ -91,6 +92,65 @@ main.container {
     text-align: center;
     padding: 10px;
     width: 80%;
+}
+
+div.main-text {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5px; 
+    margin: auto;
+    margin-top: 10px;
+    width: 70%;
+}
+
+div.title-style_text {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+div.title-style_line {
+    width: 210px;
+    background-color: var(--cor02);
+    height: 3px;
+    margin: auto;
+}
+
+div.main-text h1 {
+    font-variant: small-caps;
+    font-size: 3rem;
+    text-shadow: 1px 1px 1px var(--cor02);
+}
+
+div.main-text strong {
+    color: var(--cor02);
+}
+
+div.wpp-icon{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+div.wpp-icon a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #50B154;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+div.wpp-icon img {
+    height: 30px;
+    width: 30px;
+}
+
+div.wpp-icon p {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
 }
 
 div.conteudo {
